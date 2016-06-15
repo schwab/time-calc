@@ -12,11 +12,11 @@ class loader:
 		self.weekday = self.today.weekday()
 		self.day1 = self.today- timedelta(days=self.weekday)
 	def load_from_file(self,path):
-		print("load file " + path )
+		#print("load file " + path )
 		if not os.path.exists(path):
 			print('File not found ' + path)			
 		else:
-			print("Loading " + path)
+			#print("Loading " + path)
 			try:
 				f = open(path,'rb')
 				reader = csv.reader(f)
@@ -46,7 +46,8 @@ class loader:
 		self.schedule.append(sch)
 		#entry = {'time':								
 
-l = loader()
-l.load_from_file('schedule1.csv')
-for x in l.schedule:
-	print x
+if __name__ == '__main__':
+	l = loader()
+	l.load_from_file('schedule1.csv')
+	for x in l.schedule:
+		print x
