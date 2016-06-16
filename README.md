@@ -1,4 +1,20 @@
-The task is to return 2 pieces of information given a schedule, a day of the week and the time of day.
+# Schedule Calc
+Implements a schedule calcultor (intercept and elapased shift time) for a particular schedule format.
+
+## Usage
+The script is design to be run on jython, but also works on python 2.7 with no changes. Note, python 2.7 is about 5x faster, mainly because of the time it takes to load java on jython.   The script reads the schedule from the file schedule1.csv.  This can be easily modified have the actual schedule it should work against.  Each line is one day's schedule.  The result is printed directly console and contains the two values :
+  * boolean - is in a scheduled period
+  * number - seconds in since the last scheduled start or between the last scheduled period if the other value is false
+
+To run use the command : 
+```jython calculate.py```
+
+It's also possible to see the output of the loader to check for problems or just to write it out to a file for later use : 
+```jython load_sch.py``` 
+
+## The task 
+
+is to return 2 pieces of information given a schedule, a day of the week and the time of day.
 
 The two pieces of information to be returned are:
 1. Whether or not we are in the operational period in a shift (a boolean or bit value representing running or not running) 
