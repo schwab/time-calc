@@ -2,7 +2,8 @@
 Implements a schedule calculator (intercept and elapased shift time) for a particular schedule format.
 
 ## Usage
-The script is design to be run on jython, but also works on python 2.7 with no changes. Note, python 2.7 is about 5x faster, mainly because of the time it takes to load java on jython.   The script reads the schedule from the file schedule1.csv.  This can be easily modified have the actual schedule it should work against.  Each line is one day's schedule.  The result is printed directly console and contains the two values :
+The script is design to be run on jython, but also works on python 2.7 with no changes. Note, python 2.7 is about 5x faster, mainly because of the time it takes to load java on jython.   The script reads the schedule from the file schedule1.csv.  Modify this file with a real schedule and you're ready to go.  Each line is one day's schedule starting with Monday.  The result is printed directly console and contains the two values :
+
   * boolean - is in a scheduled period
   * number - seconds in since the last scheduled start or between the last scheduled period if the other value is false
 
