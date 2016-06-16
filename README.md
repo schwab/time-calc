@@ -6,10 +6,12 @@ The script is design to be run on jython, but also works on python 2.7 with no c
   * boolean - is in a scheduled period
   * number - seconds in since the last scheduled start or between the last scheduled period if the other value is false
 
-To run use the command : 
+To run use the command :
+ 
 ```jython calculate.py```
 
 It's also possible to see the output of the loader to check for problems or just to write it out to a file for later use : 
+
 ```jython load_sch.py``` 
 
 ## The task 
