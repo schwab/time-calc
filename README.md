@@ -1,5 +1,5 @@
-# Schedule Calc
-Implements a schedule calcultor (intercept and elapased shift time) for a particular schedule format.
+# Schedule Calculator
+Implements a schedule calculator (intercept and elapased shift time) for a particular schedule format.
 
 ## Usage
 The script is design to be run on jython, but also works on python 2.7 with no changes. Note, python 2.7 is about 5x faster, mainly because of the time it takes to load java on jython.   The script reads the schedule from the file schedule1.csv.  This can be easily modified have the actual schedule it should work against.  Each line is one day's schedule.  The result is printed directly console and contains the two values :
