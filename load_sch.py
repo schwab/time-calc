@@ -35,10 +35,16 @@ class loader:
 						working = not working	
 					#print row
 			finally:
-				f.close()	
+				f.close()
+		self.prependDay7()	
+	def prependDay7(self):
+		day7 = [x for x in self.schedule if x['dow'] == 7 and x['isSet']]
+		for x in day7:
+			x["dtTime"] = x["dtTime"] - timedelta(days = 7)
+		self.schedule = day7 + self.schedule
 	def create_sch_entry(self,doy,t,startstop):
 		doyDate = self.day1 + timedelta(days = doy-1)
-		sch = {'isSet':True,'dtTime':0,'start':startstop}
+		sch = {'isSet':True,'dtTime':0,'start':startstop,'dow':doy}
 		if t[0] == 24:
 			sch['isSet']=False
 		else:
